@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CEP</title>
+    <link rel="shortcut icon" href="./imgs/infoIcon.png" type="image/png">
+    <link rel="stylesheet" href="./app.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/fdaa89e91b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-toggle-on"></i></a>
+        <h3>Consultas disponíveis:</h3>
+        <a href="./plate.html">Informações - Placa</a>
+        <a href="./cep.html">Informações - CEP</a>
+        <a href="./exchangeRate.html">Cotação de Moedas</a>
+    </div>
+
+    <div class="otherTools">
+        <h3>Consulte outras informações <i class="far fa-address-book"></i></h3>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fas fa-toggle-off"></i> Expandir</span>
+    </div> 
+    
+    <div class="container" id="title">
+        <section class="infoRequest">
+            <img id="infoImg" src="./imgs/Information.png">
+            <h1>Consultar CEP</h1>
+            <form id="generalForm">
+                <label for="generalSearch">Qual CEP gostaria de consultar?</label>
+                <input type="text" id="generalSearch" name="generalSearch" placeholder="12345678">
+                <button id="zipcodeSubmit">Pesquisar</button>
+            </form>
+        </section>
+        <section id="infoDelivery">
+            <table id="generalTable">
+                <tr>
+                    <th class="infoLabel">CEP</th>
+                    <td id="zcZipcode"><i class="fas fa-house-user"></i></td>
+                </tr>
+                <tr>
+                    <th class="infoLabel">Logradouro</th>
+                    <td id="zcStreet"><i class="fas fa-house-user"></i></td>                    
+                </tr>
+                <tr>
+                    <th class="infoLabel">Complemento</th>
+                    <td id="zcComplement"><i class="fas fa-house-user"></i></td>
+                </tr>
+                <tr>
+                    <th class="infoLabel">Bairro</th>
+                    <td id="zcNeighborhood"><i class="fas fa-house-user"></i></td>
+                </tr>
+                <tr>
+                    <th class="infoLabel">Localidade</th>
+                    <td id="zcCity"><i class="fas fa-house-user"></i></td>
+                </tr>
+                <tr>
+                    <th class="infoLabel">Estado</th>
+                    <td id="zcState"><i class="fas fa-house-user"></i></td>
+                </tr>
+                <tr>
+                    <th class="infoLabel">DDD</th>
+                    <td id="zcAreaCode"><i class="fas fa-house-user"></i></td>
+                </tr>
+              </table>
+        </section>     
+
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>

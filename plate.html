@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Placa</title>
+    <link rel="shortcut icon" href="./imgs/infoIcon.png" type="image/png">
+    <link rel="stylesheet" href="./app.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/fdaa89e91b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-toggle-on"></i></a>
+        <h3>Consultas disponíveis:</h3>
+        <a href="./plate.html">Informações - Placa</a>
+        <a href="./cep.html">Informações - CEP</a>
+        <a href="./exchangeRate.html">Cotação de Moedas</a>
+    </div>
+
+    <div class="otherTools">
+        <h3>Consulte outras informações <i class="far fa-address-book"></i></h3>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fas fa-toggle-off"></i> Expandir</span>
+    </div>    
+    
+    <div class="container" id="title">
+        <section class="infoRequest">
+            <img id="infoImg" src="./imgs/Information.png">
+            <h1>Consultar Placa</h1>
+            <form id="generalForm">
+                <label for="generalSearch">Qual placa gostaria de consultar?</label>
+                <input type="text" id="generalSearch" name="generalSearch" placeholder="abc1234">
+                <button id="plateSubmit">Pesquisar</button>
+            </form>
+        </section>
+        <section id="infoDelivery">
+            <table id="generalTable">
+                <tr>
+                    <th class="infoLabel">Modelo</th>
+                    <td id="vModel"><i class="fas fa-atom"></i></td>
+                </tr>
+                <tr>
+                    <th class="infoLabel">Cor</th>
+                    <td id="vColor"><i class="fas fa-atom"></i></td>                    
+                </tr>
+                <tr>
+                    <th class="infoLabel">Ano</th>
+                    <td id="vYear"><i class="fas fa-atom"></i></td>
+                </tr>
+                <tr>
+                    <th class="infoLabel">Ano Modelo</th>
+                    <td id="vYearModel"><i class="fas fa-atom"></i></td>
+                </tr>
+                <tr>
+                    <th class="infoLabel">Município</th>
+                    <td id="vCity"><i class="fas fa-atom"></i></td>
+                </tr>
+                <tr>
+                    <th class="infoLabel">Estado</th>
+                    <td id="vState"><i class="fas fa-atom"></i></td>
+                </tr>
+              </table>
+        </section>       
+
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>

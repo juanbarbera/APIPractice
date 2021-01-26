@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Cotação</title>
+    <link rel="shortcut icon" href="./imgs/infoIcon.png" type="image/png">
+    <link rel="stylesheet" href="./app.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/fdaa89e91b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-toggle-on"></i></a>
+        <h3>Consultas disponíveis:</h3>
+        <a href="./plate.html">Informações - Placa</a>
+        <a href="./cep.html">Informações - CEP</a>
+        <a href="./exchangeRate.html">Cotação de Moedas</a>
+    </div>
+
+    <div class="otherTools">
+        <h3>Consulte outras informações <i class="far fa-address-book"></i></h3>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fas fa-toggle-off"></i> Expandir</span>
+    </div>    
+    
+    <div class="container" id="title">
+        <section class="infoRequest">
+            <img id="infoImg" src="./imgs/Information.png">
+            <h1>Consultar Cotação</h1>
+        </section>
+        <section id="infoDelivery">
+            <table id="generalTable">
+                <tr>
+                    <th class="infoLabel">Dólar</th>
+                    <td id="mDollar"><i class="fas fa-money-bill-wave"></i>R$<span id="dollar"></span></td>
+                </tr>
+                <tr>
+                    <th class="infoLabel">Euro</th>
+                    <td id="mEuro"><i class="fas fa-money-bill-wave"></i>R$<span id="euro"></span></td>
+                </tr>
+                <tr>
+                    <th class="infoLabel">Libra Esterlina</th>
+                    <td id="mPound"><i class="fas fa-money-bill-wave"></i>R$<span id="pound"></span></td>
+                </tr>
+                <tr>
+                    <th class="infoLabel">Peso Argentino</th>
+                    <td id="mArgPeso"><i class="fas fa-money-bill-wave"></i>R$<span id="argPeso"></span></td>
+                </tr>
+                <tr>
+                    <th class="infoLabel">Iene Japonês</th>
+                    <td id="mJapanY"><i class="fas fa-money-bill-wave"></i>R$<span id="japanY"></span></td>
+                </tr>
+                <tr>
+                    <th class="infoLabel">Bitcoin</th>
+                    <td id="mBitcoin"><i class="fas fa-money-bill-wave"></i>US$<span id="bitcoin"></span></td>
+                </tr>
+              </table>
+              <p id="obs">Obs. Câmbio atualizado a cada 24 horas. Nem queira saber quanto custa 1 Bitcoin em reais</p>
+        </section>       
+
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
